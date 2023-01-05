@@ -9,7 +9,7 @@ let address = new Schema(
         state: {type: String, required: true},
         pin: {type: Number},
         user: {type: Schema.Types.ObjectId}
-    }
+    }, {timestamps: true}
 );
 
 let Address = mongoose.model("Address", address);
