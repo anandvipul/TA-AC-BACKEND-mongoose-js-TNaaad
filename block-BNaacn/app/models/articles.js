@@ -11,3 +11,7 @@ let article = new Schema (
         likes: {type: Number, default: 0}
     }
 );
+
+let Article = mongoose.model("Article", article);
+
+module.exports = {Article};
