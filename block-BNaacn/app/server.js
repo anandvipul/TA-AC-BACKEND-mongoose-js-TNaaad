@@ -1,4 +1,3 @@
-const { application } = require("express");
 let express = require("express");
 let mongoose = require("mongoose");
 let logger = require("morgan");
@@ -16,7 +15,7 @@ mongoose.connect("mongodb://localhost:27017/test", (err) => {
 
 let app = express();
 
-
+app.use(logger("dev"));
 
 
 app.get("/", (req, res) => {
